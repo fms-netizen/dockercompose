@@ -1,0 +1,23 @@
+services:
+
+  filebrowser:
+    image: hurlenko/filebrowser:latest
+    container_name: filebrowser
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - FB_BASEURL=/filebrowser
+    ports:
+      - "8200:8080"
+    volumes:
+      - /path/to/data:/data
+      - /path/to/config:/config
+#      - ./music:/data/music
+#      - ./movies:/data/movies
+#      - ./photos:/data/photos
+      - /home/pc/Pictures:/data/photos
+      - /home/pc/Myusb:/data/media:rw,shared
+#debe incluiy el /data antes
+      
+    restart: unless-stopped

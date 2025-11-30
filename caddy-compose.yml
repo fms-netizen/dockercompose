@@ -14,12 +14,12 @@ services:
       - /etc/localtime:/etc/localtime:ro
       
     networks:
-    #  - net_default
-      - host
+       - net_default
+    #  - host
 
 networks:
-  #net_default:
-  host:
+  net_default:
+  # host:
     external: true
     
     

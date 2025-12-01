@@ -27,7 +27,7 @@ services:
       - /path/to/cache:/cache
       - /path/to/media:/new
       - /home/pc/Myusb:/media:rw,shared
-      - /home/pc/sftp_remote:/mediaremote:rw,shared      
+      - /home/pc/sftp_remote:/mediaremote:rw,shared     #mount whit sshfs 
       - /lib/firmware:/lib/firmware
       
       #/lib/firmware/mali_csffw_g15p0/mali_csffw.bin

@@ -16,3 +16,10 @@ services:
       - 9117:9117
     restart: unless-stopped
 
+
+    networks:
+      - net_default
+
+networks:
+  net_default:
+    external: true

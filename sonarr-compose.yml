@@ -21,8 +21,9 @@ services:
       - 8989:8989
     restart: unless-stopped
 
+    networks:
+      - net_default
 
-   networks:
-       net_default:
-         external: true
-    
+networks:
+  net_default:
+    external: true
